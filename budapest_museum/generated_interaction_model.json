@@ -1,0 +1,2631 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "budapest museum personal assistant",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "getPropertyObject",
+                    "slots": [
+                        {
+                            "name": "property",
+                            "type": "property"
+                        },
+                        {
+                            "name": "entity",
+                            "type": "entity"
+                        }
+                    ],
+                    "samples": [
+                        "what is the {property} of {entity}",
+                        "which is the {property} of {entity}",
+                        "what is the {property} of entity {entity}",
+                        "what is the value of {property} attached to {entity}",
+                        "what is the value of {property} related to {entity}",
+                        "By focusing on {entity} what is its {property}",
+                        "If we focus on {entity} what is its {property}",
+                        "If we talk about {entity} what is its {property}",
+                        "By focusing on {entity} who is its {property}",
+                        "If we focus on {entity} who is its {property}",
+                        "If we talk about {entity} who is its {property}",
+                        "when is the {property} of {entity}",
+                        "who is the {property} of {entity}"
+                    ]
+                },
+                {
+                    "name": "getNumericFilter",
+                    "slots": [
+                        {
+                            "name": "property",
+                            "type": "property"
+                        },
+                        {
+                            "name": "symbol",
+                            "type": "symbol"
+                        },
+                        {
+                            "name": "value",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "which entity has {property} {symbol} {value}",
+                        "what entity has {property} {symbol} {value}",
+                        "what does it have {property} {symbol} {value}"
+                    ]
+                },
+                {
+                    "name": "getNumericFilterByClass",
+                    "slots": [
+                        {
+                            "name": "class",
+                            "type": "entity"
+                        },
+                        {
+                            "name": "property",
+                            "type": "property"
+                        },
+                        {
+                            "name": "symbol",
+                            "type": "symbol"
+                        },
+                        {
+                            "name": "value",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "which {class} has {property} {symbol} {value}"
+                    ]
+                },
+                {
+                    "name": "getClassInstances",
+                    "slots": [
+                        {
+                            "name": "class",
+                            "type": "entity"
+                        }
+                    ],
+                    "samples": [
+                        "can you list entities belonging to the class {class}",
+                        "can you list instances of {class}",
+                        "what are the instances of {class}",
+                        "provide me examples of {class}",
+                        "list me elements of {class}",
+                        "what are instances of {class}",
+                        "how many instances of {class} are there",
+                        "list me instances of {class}"
+                    ]
+                },
+                {
+                    "name": "getTripleVerification",
+                    "slots": [
+                        {
+                            "name": "subj",
+                            "type": "entity"
+                        },
+                        {
+                            "name": "property",
+                            "type": "property"
+                        },
+                        {
+                            "name": "obj",
+                            "type": "entity"
+                        }
+                    ],
+                    "samples": [
+                        "is it true that {subj} has {obj} as {property}",
+                        "can you verify if {subj} has {obj} as {property}",
+                        "{subj} has {obj} as {property}",
+                        "can you check if {subj} has {obj} as {property}"
+                    ]
+                },
+                {
+                    "name": "getSuperlative",
+                    "slots": [
+                        {
+                            "name": "entity",
+                            "type": "entity"
+                        },
+                        {
+                            "name": "property",
+                            "type": "property"
+                        },
+                        {
+                            "name": "superlative",
+                            "type": "superlative"
+                        }
+                    ],
+                    "samples": [
+                        "what is the {entity} with {superlative} {property}"
+                    ]
+                },
+                {
+                    "name": "getPropertySubjectByClass",
+                    "slots": [
+                        {
+                            "name": "class",
+                            "type": "entity"
+                        },
+                        {
+                            "name": "property",
+                            "type": "property"
+                        },
+                        {
+                            "name": "entity",
+                            "type": "entity"
+                        }
+                    ],
+                    "samples": [
+                        "how many {class} has {property} like {entity}",
+                        "which {class} has {property} like {entity}",
+                        "which {class} has {entity} as {property}",
+                        "how many {class} has {entity} as {property}"
+                    ]
+                },
+                {
+                    "name": "getPropertySubject",
+                    "slots": [
+                        {
+                            "name": "property",
+                            "type": "property"
+                        },
+                        {
+                            "name": "entity",
+                            "type": "entity"
+                        }
+                    ],
+                    "samples": [
+                        "which entity has {entity} as {property}",
+                        "what have {entity} as {property}",
+                        "what has {entity} as {property}",
+                        "how many entities have {entity} as {property}",
+                        "how many entities have {property} like {entity}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "entity",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "time-span"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "place"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "person"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "marc country"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "marc geographic area"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "marc language"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "physical thing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "right"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "document"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "visual item"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "actor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "appellation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "identifier"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "place appellation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "date"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dimension"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "measurement unit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "creation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "birth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "death"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "information object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "group"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "conceptual object appellation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "activity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "actor appellation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "erlangen frbroo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has note"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "past and present countries entries"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "past and present gacs entries"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "present gacs entries"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "past and present languages entries"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "erlangen crm / owl"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "transfer of custody"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "modification"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "production"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "attribute assignment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "condition assessment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "identifier assignment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "measurement"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "type assignment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "physical object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "crm entity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "biological object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "man-made object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "physical man-made thing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "man-made feature"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "physical feature"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "site"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "conceptual object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "design or procedure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "temporal entity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "authority document"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "linguistic object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "inscription"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "title"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "image"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "condition state"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "legal body"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "address"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "section definition"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "spatial coordinates"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "place name"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "time appellation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "period"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "contact point"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "language"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "material"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "event"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "beginning of existence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "end of existence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "formation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dissolution"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "destruction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "man-made thing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "legal object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "persistent item"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "collection"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "part addition"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "part removal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "transformation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "type creation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "information carrier"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "joining"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "leaving"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "curation activity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "propositional object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "acquisition"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "symbolic object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "co-reference assignment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "spacetime volume"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "spacetime snapshot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "move"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was death of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "died in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "had as general use"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was use of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has title"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is title of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was intended for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was intention of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is subject to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "applies to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "right held by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has right on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is composed of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forms part of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current or former member"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is current or former member of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has produced"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was produced by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current or former curator"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is current or former curator of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "falls within"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "contains"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "augmented"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was augmented by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "added"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was added by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "diminished"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was diminished by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "removed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was removed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is equal in time to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "finishes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is finished by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "starts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is started by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "occurs during"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "includes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "overlaps in time with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is overlapped in time by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "meets in time with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is met in time by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "had participant"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "participated in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "occurs before"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "occurs after"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "overlaps with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "borders with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "resulted in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "resulted from"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "transformed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was transformed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "used object of type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was type of object used in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "employed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was employed in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has broader term"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has narrower term"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "carries"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is carried by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is about"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is subject of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "occurred in the presence of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was present at"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shows features of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "features are also found on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is identified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "identifies"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is separated from"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "continued"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was continued by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "created type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was created by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was based on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "supported type creation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "exemplifies"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is exemplified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "represents"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has representation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has alternative form"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "destroyed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was destroyed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "assigned attribute to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was attributed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "assigned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was assigned by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "used constituent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was used in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "joined"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was joined by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "joined with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gained member by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "separated"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "left by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "separated from"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lost member by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "curated"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was curated by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has component"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is component of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "carried out by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "performed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "defines typical parts of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "defines typical wholes for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was formed from"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has parent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is parent of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "assigned co-reference to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was regarded to co-refer by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "assigned non co-reference to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was regarded not to co-refer by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has co-reference target"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is co-reference target of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "occupies"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is at rest relative to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "provides reference space for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "occupied"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was influenced by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "influenced"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has temporal projection"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has spatial projection"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is restricted by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "used specific object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was used for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was motivated by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "motivated"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was intended use of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was made for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "had specific purpose"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was purpose of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "had general purpose"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "transferred title to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "acquired title through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "transferred title from"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "surrendered title through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "transferred title of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "changed ownership through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "moved"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "moved by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "moved to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was destination of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "moved from"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was origin of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "custody surrendered by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "surrendered custody through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "custody received by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "received custody through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is type of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "transferred custody of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "custody transferred through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has modified"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was modified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "used general technique"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was technique of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "used specific technique"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was used by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "concerned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was assessed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has identified"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was identified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "deassigned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was deassigned by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "measured"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was measured by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "observed dimension"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was observed in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "classified"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was classified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has dimension"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is dimension of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has condition"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is condition of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "consists of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is incorporated in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has preferred identifier"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is preferred identifier of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has former or current keeper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is former or current keeper of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has time-span"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is time-span of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current keeper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is current keeper of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has former or current owner"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is former or current owner of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current owner"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is current owner of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has former or current location"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is former or current location of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current permanent location"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is current permanent location of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current location"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "currently holds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bears feature"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is found on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has number of parts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has section definition"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "defines section"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has section"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is located on or within"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "depicts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is depicted by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shows visual item"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is shown by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "refers to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is referred to by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "foresees use of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "use foreseen by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has association with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is associated with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "documents"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is documented in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lists"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is listed in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has language"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is language of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has translation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is translation of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current or former residence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is current or former residence of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "possesses"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is possessed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has contact point"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "provides access to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "beginning is qualified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "took place at"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "witnessed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "end is qualified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ongoing throughout"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "at some time within"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "had at least duration"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was minimum duration of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "had at most duration"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was maximum duration of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "took place on or within"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has value"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has unit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is unit of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "brought into existence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was brought into existence by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "took out of existence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was taken out of existence by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has created"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has formed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was formed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "by mother"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gave birth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "from father"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was father for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "brought into life"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was born"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dissolved"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was dissolved by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "subject to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "right on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should have type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should be type of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should have dimension"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should be dimension of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should consist of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should be incorporated in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should be composed of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "may form part of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should have number of parts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should carry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "should be carried by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "corporate body"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "name"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "individual work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "complex work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "container work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "aggregation work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "serial work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "publication work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "performance work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "recording work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "self-contained expression"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "expression fragment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "publication expression"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "performance plan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "recording"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "work conception"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "expression creation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "recording event"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "expression"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "publication event"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "performance"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "carrier production event"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "reproduction event"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "manifestation product type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "representative manifestation assignment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "representative expression assignment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "identifier rule"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bibliographic agency"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "manifestation singleton"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "item"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "concept"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "object"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has member"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is member of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has issuing rule"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is issuing rule of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is realised in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "realises"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "incorporates"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has fragment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is fragment of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "initiated"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was initiated by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "created"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "created a realisation of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was realised through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is logical successor of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has successor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "recorded"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was recorded through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was created through"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was performed in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "produced things of type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "used as source material"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "produced"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "reproduced"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was reproduced by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is derivative of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has derivative"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is reproduction of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has reproduction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has representative expression"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is representative expression for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has representative manifestation product type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is representative manifestation product type for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is representative manifestation singleton for"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has representative manifestation singleton"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "assigned to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "carriers provided by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "comprises carriers of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "used rule"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was the rule used in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is example of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has example"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "marc list for languages"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "marc list for countries"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "marc list for geographic areas"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "property",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "has note"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "died in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is subject to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is current or former member of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "had participant"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is subject of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was present at"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is identified by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has representation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "performed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has type"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has dimension"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has preferred identifier"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has time-span"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has current keeper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has former or current location"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "refers to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is documented in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is possessed by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "took place at"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "contains"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has value"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "has unit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "was born"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "instanceOf"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "label"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "superlative",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "most",
+                                "synonyms": [
+                                    "maximum",
+                                    "highest"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "less",
+                                "synonyms": [
+                                    "minimum",
+                                    "lowest"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "symbol",
+                    "values": [
+                        {
+                            "name": {
+                                "value": ">",
+                                "synonyms": [
+                                    "more",
+                                    "more than"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "<",
+                                "synonyms": [
+                                    "less",
+                                    "less than"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "=",
+                                "synonyms": [
+                                    "equals",
+                                    "equals to"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

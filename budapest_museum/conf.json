@@ -1,0 +1,2650 @@
+{
+	
+	"invocation_name" : "budapest museum personal assistant",
+	"intents" : ["getPropertyObject", "getNumericFilter", "getNumericFilterByClass", "getClassInstances", "getTripleVerification", "getSuperlative", "getPropertySubjectByClass", "getPropertySubject"],
+	"lang" : "en",
+	"result_limit" : 5,
+	"endpoint" : "http://data.szepmuveszeti.hu/sparql",	
+
+	"entity" : {
+    "time-span": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E52_Time-Span>"
+        ]
+    },
+    "place": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E53_Place>"
+        ]
+    },
+    "type": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E55_Type>"
+        ]
+    },
+    "person": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F10_Person>"
+        ]
+    },
+    "marc country": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/countries/MARC_Country>"
+        ]
+    },
+    "marc geographic area": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/geographicAreas/MARC_GeographicArea>"
+        ]
+    },
+    "marc language": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/languages/MARC_Language>"
+        ]
+    },
+    "physical thing": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E18_Physical_Thing>"
+        ]
+    },
+    "right": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E30_Right>"
+        ]
+    },
+    "document": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E31_Document>"
+        ]
+    },
+    "visual item": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E36_Visual_Item>"
+        ]
+    },
+    "actor": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E39_Actor>"
+        ]
+    },
+    "appellation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E41_Appellation>"
+        ]
+    },
+    "identifier": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E42_Identifier>"
+        ]
+    },
+    "place appellation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E44_Place_Appellation>"
+        ]
+    },
+    "date": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E50_Date>"
+        ]
+    },
+    "dimension": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E54_Dimension>"
+        ]
+    },
+    "measurement unit": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E58_Measurement_Unit>"
+        ]
+    },
+    "creation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E65_Creation>"
+        ]
+    },
+    "birth": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E67_Birth>"
+        ]
+    },
+    "death": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E69_Death>"
+        ]
+    },
+    "information object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E73_Information_Object>"
+        ]
+    },
+    "group": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E74_Group>"
+        ]
+    },
+    "conceptual object appellation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E75_Conceptual_Object_Appellation>"
+        ]
+    },
+    "activity": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E7_Activity>"
+        ]
+    },
+    "actor appellation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E82_Actor_Appellation>"
+        ]
+    },
+    "erlangen frbroo": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/>"
+        ]
+    },
+    "has note": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P3_has_note>"
+        ]
+    },
+    "place": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F9_Place>"
+        ]
+    },
+    "past and present countries entries": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/countries/collection_PastPresentCountriesEntries>"
+        ]
+    },
+    "past and present gacs entries": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/geographicAreas/collection_PastPresentGACSEntries>"
+        ]
+    },
+    "present gacs entries": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/geographicAreas/collection_PresentGACSEntries>"
+        ]
+    },
+    "past and present languages entries": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/languages/collection_PastPresentLanguagesEntries>"
+        ]
+    },
+    "erlangen crm / owl": {
+        "urls": [
+            "<http://erlangen-crm.org/current/>"
+        ]
+    },
+    "transfer of custody": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E10_Transfer_of_Custody>"
+        ]
+    },
+    "modification": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E11_Modification>"
+        ]
+    },
+    "production": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E12_Production>"
+        ]
+    },
+    "attribute assignment": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E13_Attribute_Assignment>"
+        ]
+    },
+    "condition assessment": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E14_Condition_Assessment>"
+        ]
+    },
+    "identifier assignment": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E15_Identifier_Assignment>"
+        ]
+    },
+    "measurement": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E16_Measurement>"
+        ]
+    },
+    "type assignment": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E17_Type_Assignment>"
+        ]
+    },
+    "physical object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E19_Physical_Object>"
+        ]
+    },
+    "crm entity": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E1_CRM_Entity>"
+        ]
+    },
+    "biological object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E20_Biological_Object>"
+        ]
+    },
+    "person": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E21_Person>"
+        ]
+    },
+    "man-made object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E22_Man-Made_Object>"
+        ]
+    },
+    "physical man-made thing": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing>"
+        ]
+    },
+    "man-made feature": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E25_Man-Made_Feature>"
+        ]
+    },
+    "physical feature": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E26_Physical_Feature>"
+        ]
+    },
+    "site": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E27_Site>"
+        ]
+    },
+    "conceptual object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E28_Conceptual_Object>"
+        ]
+    },
+    "design or procedure": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E29_Design_or_Procedure>"
+        ]
+    },
+    "temporal entity": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E2_Temporal_Entity>"
+        ]
+    },
+    "authority document": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E32_Authority_Document>"
+        ]
+    },
+    "linguistic object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E33_Linguistic_Object>"
+        ]
+    },
+    "inscription": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E34_Inscription>"
+        ]
+    },
+    "title": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E35_Title>"
+        ]
+    },
+    "mark": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E37_Mark>"
+        ]
+    },
+    "image": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E38_Image>"
+        ]
+    },
+    "condition state": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E3_Condition_State>"
+        ]
+    },
+    "legal body": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E40_Legal_Body>"
+        ]
+    },
+    "address": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E45_Address>"
+        ]
+    },
+    "section definition": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E46_Section_Definition>"
+        ]
+    },
+    "spatial coordinates": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E47_Spatial_Coordinates>"
+        ]
+    },
+    "place name": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E48_Place_Name>"
+        ]
+    },
+    "time appellation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E49_Time_Appellation>"
+        ]
+    },
+    "period": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E4_Period>"
+        ]
+    },
+    "contact point": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E51_Contact_Point>"
+        ]
+    },
+    "language": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E56_Language>"
+        ]
+    },
+    "material": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E57_Material>"
+        ]
+    },
+    "event": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E5_Event>"
+        ]
+    },
+    "beginning of existence": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E63_Beginning_of_Existence>"
+        ]
+    },
+    "end of existence": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E64_End_of_Existence>"
+        ]
+    },
+    "formation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E66_Formation>"
+        ]
+    },
+    "dissolution": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E68_Dissolution>"
+        ]
+    },
+    "destruction": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E6_Destruction>"
+        ]
+    },
+    "thing": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E70_Thing>"
+        ]
+    },
+    "man-made thing": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E71_Man-Made_Thing>"
+        ]
+    },
+    "legal object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E72_Legal_Object>"
+        ]
+    },
+    "persistent item": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E77_Persistent_Item>"
+        ]
+    },
+    "collection": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E78_Collection>"
+        ]
+    },
+    "part addition": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E79_Part_Addition>"
+        ]
+    },
+    "part removal": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E80_Part_Removal>"
+        ]
+    },
+    "transformation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E81_Transformation>"
+        ]
+    },
+    "type creation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E83_Type_Creation>"
+        ]
+    },
+    "information carrier": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E84_Information_Carrier>"
+        ]
+    },
+    "joining": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E85_Joining>"
+        ]
+    },
+    "leaving": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E86_Leaving>"
+        ]
+    },
+    "curation activity": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E87_Curation_Activity>"
+        ]
+    },
+    "propositional object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E89_Propositional_Object>"
+        ]
+    },
+    "acquisition": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E8_Acquisition>"
+        ]
+    },
+    "symbolic object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E90_Symbolic_Object>"
+        ]
+    },
+    "co-reference assignment": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E91_Co-Reference_Assignment>"
+        ]
+    },
+    "spacetime volume": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E92_Spacetime_Volume>"
+        ]
+    },
+    "spacetime snapshot": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E93_Spacetime_Snapshot>"
+        ]
+    },
+    "move": {
+        "urls": [
+            "<http://erlangen-crm.org/current/E9_Move>"
+        ]
+    },
+    "was death of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P100_was_death_of>"
+        ]
+    },
+    "died in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P100i_died_in>"
+        ]
+    },
+    "had as general use": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P101_had_as_general_use>"
+        ]
+    },
+    "was use of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P101i_was_use_of>"
+        ]
+    },
+    "has title": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P102_has_title>"
+        ]
+    },
+    "is title of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P102i_is_title_of>"
+        ]
+    },
+    "was intended for": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P103_was_intended_for>"
+        ]
+    },
+    "was intention of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P103i_was_intention_of>"
+        ]
+    },
+    "is subject to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P104_is_subject_to>"
+        ]
+    },
+    "applies to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P104i_applies_to>"
+        ]
+    },
+    "right held by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P105_right_held_by>"
+        ]
+    },
+    "has right on": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P105i_has_right_on>"
+        ]
+    },
+    "is composed of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P106_is_composed_of>"
+        ]
+    },
+    "forms part of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P106i_forms_part_of>"
+        ]
+    },
+    "has current or former member": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P107_has_current_or_former_member>"
+        ]
+    },
+    "is current or former member of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P107i_is_current_or_former_member_of>"
+        ]
+    },
+    "has produced": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P108_has_produced>"
+        ]
+    },
+    "was produced by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P108i_was_produced_by>"
+        ]
+    },
+    "has current or former curator": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P109_has_current_or_former_curator>"
+        ]
+    },
+    "is current or former curator of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P109i_is_current_or_former_curator_of>"
+        ]
+    },
+    "falls within": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P10_falls_within>"
+        ]
+    },
+    "contains": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P10i_contains>"
+        ]
+    },
+    "augmented": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P110_augmented>"
+        ]
+    },
+    "was augmented by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P110i_was_augmented_by>"
+        ]
+    },
+    "added": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P111_added>"
+        ]
+    },
+    "was added by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P111i_was_added_by>"
+        ]
+    },
+    "diminished": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P112_diminished>"
+        ]
+    },
+    "was diminished by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P112i_was_diminished_by>"
+        ]
+    },
+    "removed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P113_removed>"
+        ]
+    },
+    "was removed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P113i_was_removed_by>"
+        ]
+    },
+    "is equal in time to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P114_is_equal_in_time_to>"
+        ]
+    },
+    "finishes": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P115_finishes>"
+        ]
+    },
+    "is finished by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P115i_is_finished_by>"
+        ]
+    },
+    "starts": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P116_starts>"
+        ]
+    },
+    "is started by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P116i_is_started_by>"
+        ]
+    },
+    "occurs during": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P117_occurs_during>"
+        ]
+    },
+    "includes": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P117i_includes>"
+        ]
+    },
+    "overlaps in time with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P118_overlaps_in_time_with>"
+        ]
+    },
+    "is overlapped in time by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P118i_is_overlapped_in_time_by>"
+        ]
+    },
+    "meets in time with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P119_meets_in_time_with>"
+        ]
+    },
+    "is met in time by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P119i_is_met_in_time_by>"
+        ]
+    },
+    "had participant": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P11_had_participant>"
+        ]
+    },
+    "participated in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P11i_participated_in>"
+        ]
+    },
+    "occurs before": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P120_occurs_before>"
+        ]
+    },
+    "occurs after": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P120i_occurs_after>"
+        ]
+    },
+    "overlaps with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P121_overlaps_with>"
+        ]
+    },
+    "borders with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P122_borders_with>"
+        ]
+    },
+    "resulted in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P123_resulted_in>"
+        ]
+    },
+    "resulted from": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P123i_resulted_from>"
+        ]
+    },
+    "transformed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P124_transformed>"
+        ]
+    },
+    "was transformed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P124i_was_transformed_by>"
+        ]
+    },
+    "used object of type": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P125_used_object_of_type>"
+        ]
+    },
+    "was type of object used in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P125i_was_type_of_object_used_in>"
+        ]
+    },
+    "employed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P126_employed>"
+        ]
+    },
+    "was employed in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P126i_was_employed_in>"
+        ]
+    },
+    "has broader term": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P127_has_broader_term>"
+        ]
+    },
+    "has narrower term": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P127i_has_narrower_term>"
+        ]
+    },
+    "carries": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P128_carries>"
+        ]
+    },
+    "is carried by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P128i_is_carried_by>"
+        ]
+    },
+    "is about": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P129_is_about>"
+        ]
+    },
+    "is subject of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P129i_is_subject_of>"
+        ]
+    },
+    "occurred in the presence of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P12_occurred_in_the_presence_of>"
+        ]
+    },
+    "was present at": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P12i_was_present_at>"
+        ]
+    },
+    "shows features of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P130_shows_features_of>"
+        ]
+    },
+    "features are also found on": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P130i_features_are_also_found_on>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P131_is_identified_by>"
+        ]
+    },
+    "identifies": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P131i_identifies>"
+        ]
+    },
+    "overlaps with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P132_overlaps_with>"
+        ]
+    },
+    "is separated from": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P133_is_separated_from>"
+        ]
+    },
+    "continued": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P134_continued>"
+        ]
+    },
+    "was continued by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P134i_was_continued_by>"
+        ]
+    },
+    "created type": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P135_created_type>"
+        ]
+    },
+    "was created by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P135i_was_created_by>"
+        ]
+    },
+    "was based on": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P136_was_based_on>"
+        ]
+    },
+    "supported type creation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P136i_supported_type_creation>"
+        ]
+    },
+    "exemplifies": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P137_exemplifies>"
+        ]
+    },
+    "is exemplified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P137i_is_exemplified_by>"
+        ]
+    },
+    "represents": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P138_represents>"
+        ]
+    },
+    "has representation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P138i_has_representation>"
+        ]
+    },
+    "has alternative form": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P139_has_alternative_form>"
+        ]
+    },
+    "destroyed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P13_destroyed>"
+        ]
+    },
+    "was destroyed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P13i_was_destroyed_by>"
+        ]
+    },
+    "assigned attribute to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P140_assigned_attribute_to>"
+        ]
+    },
+    "was attributed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P140i_was_attributed_by>"
+        ]
+    },
+    "assigned": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P141_assigned>"
+        ]
+    },
+    "was assigned by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P141i_was_assigned_by>"
+        ]
+    },
+    "used constituent": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P142_used_constituent>"
+        ]
+    },
+    "was used in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P142i_was_used_in>"
+        ]
+    },
+    "joined": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P143_joined>"
+        ]
+    },
+    "was joined by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P143i_was_joined_by>"
+        ]
+    },
+    "joined with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P144_joined_with>"
+        ]
+    },
+    "gained member by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P144i_gained_member_by>"
+        ]
+    },
+    "separated": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P145_separated>"
+        ]
+    },
+    "left by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P145i_left_by>"
+        ]
+    },
+    "separated from": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P146_separated_from>"
+        ]
+    },
+    "lost member by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P146i_lost_member_by>"
+        ]
+    },
+    "curated": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P147_curated>"
+        ]
+    },
+    "was curated by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P147i_was_curated_by>"
+        ]
+    },
+    "has component": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P148_has_component>"
+        ]
+    },
+    "is component of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P148i_is_component_of>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P149_is_identified_by>"
+        ]
+    },
+    "identifies": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P149i_identifies>"
+        ]
+    },
+    "carried out by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P14_carried_out_by>"
+        ]
+    },
+    "performed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P14i_performed>"
+        ]
+    },
+    "defines typical parts of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P150_defines_typical_parts_of>"
+        ]
+    },
+    "defines typical wholes for": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P150i_defines_typical_wholes_for>"
+        ]
+    },
+    "was formed from": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P151_was_formed_from>"
+        ]
+    },
+    "participated in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P151i_participated_in>"
+        ]
+    },
+    "has parent": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P152_has_parent>"
+        ]
+    },
+    "is parent of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P152i_is_parent_of>"
+        ]
+    },
+    "assigned co-reference to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P153_assigned_co-reference_to>"
+        ]
+    },
+    "was regarded to co-refer by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P153i_was_regarded_to_co-refer_by>"
+        ]
+    },
+    "assigned non co-reference to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P154_assigned_non_co-reference_to>"
+        ]
+    },
+    "was regarded not to co-refer by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P154i_was_regarded_not_to_co-refer_by>"
+        ]
+    },
+    "has co-reference target": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P155_has_co-reference_target>"
+        ]
+    },
+    "is co-reference target of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P155i_is_co-reference_target_of>"
+        ]
+    },
+    "occupies": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P156_occupies>"
+        ]
+    },
+    "is at rest relative to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P157_is_at_rest_relative_to>"
+        ]
+    },
+    "provides reference space for": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P157i_provides_reference_space_for>"
+        ]
+    },
+    "occupied": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P158_occupied>"
+        ]
+    },
+    "occupied": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P159_occupied>"
+        ]
+    },
+    "was influenced by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P15_was_influenced_by>"
+        ]
+    },
+    "influenced": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P15i_influenced>"
+        ]
+    },
+    "has temporal projection": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P160_has_temporal_projection>"
+        ]
+    },
+    "has spatial projection": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P161_has_spatial_projection>"
+        ]
+    },
+    "is restricted by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P162_is_restricted_by>"
+        ]
+    },
+    "is restricted by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P163_is_restricted_by>"
+        ]
+    },
+    "is restricted by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P164_is_restricted_by>"
+        ]
+    },
+    "used specific object": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P16_used_specific_object>"
+        ]
+    },
+    "was used for": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P16i_was_used_for>"
+        ]
+    },
+    "was motivated by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P17_was_motivated_by>"
+        ]
+    },
+    "motivated": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P17i_motivated>"
+        ]
+    },
+    "was intended use of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P19_was_intended_use_of>"
+        ]
+    },
+    "was made for": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P19i_was_made_for>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P1_is_identified_by>"
+        ]
+    },
+    "identifies": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P1i_identifies>"
+        ]
+    },
+    "had specific purpose": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P20_had_specific_purpose>"
+        ]
+    },
+    "was purpose of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P20i_was_purpose_of>"
+        ]
+    },
+    "had general purpose": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P21_had_general_purpose>"
+        ]
+    },
+    "was purpose of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P21i_was_purpose_of>"
+        ]
+    },
+    "transferred title to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P22_transferred_title_to>"
+        ]
+    },
+    "acquired title through": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P22i_acquired_title_through>"
+        ]
+    },
+    "transferred title from": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P23_transferred_title_from>"
+        ]
+    },
+    "surrendered title through": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P23i_surrendered_title_through>"
+        ]
+    },
+    "transferred title of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P24_transferred_title_of>"
+        ]
+    },
+    "changed ownership through": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P24i_changed_ownership_through>"
+        ]
+    },
+    "moved": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P25_moved>"
+        ]
+    },
+    "moved by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P25i_moved_by>"
+        ]
+    },
+    "moved to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P26_moved_to>"
+        ]
+    },
+    "was destination of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P26i_was_destination_of>"
+        ]
+    },
+    "moved from": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P27_moved_from>"
+        ]
+    },
+    "was origin of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P27i_was_origin_of>"
+        ]
+    },
+    "custody surrendered by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P28_custody_surrendered_by>"
+        ]
+    },
+    "surrendered custody through": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P28i_surrendered_custody_through>"
+        ]
+    },
+    "custody received by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P29_custody_received_by>"
+        ]
+    },
+    "received custody through": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P29i_received_custody_through>"
+        ]
+    },
+    "has type": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P2_has_type>"
+        ]
+    },
+    "is type of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P2i_is_type_of>"
+        ]
+    },
+    "transferred custody of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P30_transferred_custody_of>"
+        ]
+    },
+    "custody transferred through": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P30i_custody_transferred_through>"
+        ]
+    },
+    "has modified": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P31_has_modified>"
+        ]
+    },
+    "was modified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P31i_was_modified_by>"
+        ]
+    },
+    "used general technique": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P32_used_general_technique>"
+        ]
+    },
+    "was technique of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P32i_was_technique_of>"
+        ]
+    },
+    "used specific technique": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P33_used_specific_technique>"
+        ]
+    },
+    "was used by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P33i_was_used_by>"
+        ]
+    },
+    "concerned": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P34_concerned>"
+        ]
+    },
+    "was assessed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P34i_was_assessed_by>"
+        ]
+    },
+    "has identified": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P35_has_identified>"
+        ]
+    },
+    "was identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P35i_was_identified_by>"
+        ]
+    },
+    "assigned": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P37_assigned>"
+        ]
+    },
+    "was assigned by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P37i_was_assigned_by>"
+        ]
+    },
+    "deassigned": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P38_deassigned>"
+        ]
+    },
+    "was deassigned by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P38i_was_deassigned_by>"
+        ]
+    },
+    "measured": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P39_measured>"
+        ]
+    },
+    "was measured by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P39i_was_measured_by>"
+        ]
+    },
+    "observed dimension": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P40_observed_dimension>"
+        ]
+    },
+    "was observed in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P40i_was_observed_in>"
+        ]
+    },
+    "classified": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P41_classified>"
+        ]
+    },
+    "was classified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P41i_was_classified_by>"
+        ]
+    },
+    "assigned": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P42_assigned>"
+        ]
+    },
+    "was assigned by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P42i_was_assigned_by>"
+        ]
+    },
+    "has dimension": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P43_has_dimension>"
+        ]
+    },
+    "is dimension of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P43i_is_dimension_of>"
+        ]
+    },
+    "has condition": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P44_has_condition>"
+        ]
+    },
+    "is condition of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P44i_is_condition_of>"
+        ]
+    },
+    "consists of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P45_consists_of>"
+        ]
+    },
+    "is incorporated in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P45i_is_incorporated_in>"
+        ]
+    },
+    "is composed of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P46_is_composed_of>"
+        ]
+    },
+    "forms part of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P46i_forms_part_of>"
+        ]
+    },
+    "has preferred identifier": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P48_has_preferred_identifier>"
+        ]
+    },
+    "is preferred identifier of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P48i_is_preferred_identifier_of>"
+        ]
+    },
+    "has former or current keeper": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P49_has_former_or_current_keeper>"
+        ]
+    },
+    "is former or current keeper of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P49i_is_former_or_current_keeper_of>"
+        ]
+    },
+    "has time-span": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P4_has_time-span>"
+        ]
+    },
+    "is time-span of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P4i_is_time-span_of>"
+        ]
+    },
+    "has current keeper": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P50_has_current_keeper>"
+        ]
+    },
+    "is current keeper of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P50i_is_current_keeper_of>"
+        ]
+    },
+    "has former or current owner": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P51_has_former_or_current_owner>"
+        ]
+    },
+    "is former or current owner of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P51i_is_former_or_current_owner_of>"
+        ]
+    },
+    "has current owner": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P52_has_current_owner>"
+        ]
+    },
+    "is current owner of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P52i_is_current_owner_of>"
+        ]
+    },
+    "has former or current location": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P53_has_former_or_current_location>"
+        ]
+    },
+    "is former or current location of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P53i_is_former_or_current_location_of>"
+        ]
+    },
+    "has current permanent location": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P54_has_current_permanent_location>"
+        ]
+    },
+    "is current permanent location of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P54i_is_current_permanent_location_of>"
+        ]
+    },
+    "has current location": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P55_has_current_location>"
+        ]
+    },
+    "currently holds": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P55i_currently_holds>"
+        ]
+    },
+    "bears feature": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P56_bears_feature>"
+        ]
+    },
+    "is found on": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P56i_is_found_on>"
+        ]
+    },
+    "has number of parts": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P57_has_number_of_parts>"
+        ]
+    },
+    "has section definition": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P58_has_section_definition>"
+        ]
+    },
+    "defines section": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P58i_defines_section>"
+        ]
+    },
+    "has section": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P59_has_section>"
+        ]
+    },
+    "is located on or within": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P59i_is_located_on_or_within>"
+        ]
+    },
+    "consists of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P5_consists_of>"
+        ]
+    },
+    "forms part of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P5i_forms_part_of>"
+        ]
+    },
+    "depicts": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P62_depicts>"
+        ]
+    },
+    "is depicted by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P62i_is_depicted_by>"
+        ]
+    },
+    "shows visual item": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P65_shows_visual_item>"
+        ]
+    },
+    "is shown by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P65i_is_shown_by>"
+        ]
+    },
+    "refers to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P67_refers_to>"
+        ]
+    },
+    "is referred to by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P67i_is_referred_to_by>"
+        ]
+    },
+    "foresees use of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P68_foresees_use_of>"
+        ]
+    },
+    "use foreseen by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P68i_use_foreseen_by>"
+        ]
+    },
+    "has association with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P69_has_association_with>"
+        ]
+    },
+    "is associated with": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P69i_is_associated_with>"
+        ]
+    },
+    "documents": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P70_documents>"
+        ]
+    },
+    "is documented in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P70i_is_documented_in>"
+        ]
+    },
+    "lists": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P71_lists>"
+        ]
+    },
+    "is listed in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P71i_is_listed_in>"
+        ]
+    },
+    "has language": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P72_has_language>"
+        ]
+    },
+    "is language of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P72i_is_language_of>"
+        ]
+    },
+    "has translation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P73_has_translation>"
+        ]
+    },
+    "is translation of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P73i_is_translation_of>"
+        ]
+    },
+    "has current or former residence": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P74_has_current_or_former_residence>"
+        ]
+    },
+    "is current or former residence of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P74i_is_current_or_former_residence_of>"
+        ]
+    },
+    "possesses": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P75_possesses>"
+        ]
+    },
+    "is possessed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P75i_is_possessed_by>"
+        ]
+    },
+    "has contact point": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P76_has_contact_point>"
+        ]
+    },
+    "provides access to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P76i_provides_access_to>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P78_is_identified_by>"
+        ]
+    },
+    "identifies": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P78i_identifies>"
+        ]
+    },
+    "beginning is qualified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P79_beginning_is_qualified_by>"
+        ]
+    },
+    "took place at": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P7_took_place_at>"
+        ]
+    },
+    "witnessed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P7i_witnessed>"
+        ]
+    },
+    "end is qualified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P80_end_is_qualified_by>"
+        ]
+    },
+    "ongoing throughout": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P81_ongoing_throughout>"
+        ]
+    },
+    "at some time within": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P82_at_some_time_within>"
+        ]
+    },
+    "had at least duration": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P83_had_at_least_duration>"
+        ]
+    },
+    "was minimum duration of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P83i_was_minimum_duration_of>"
+        ]
+    },
+    "had at most duration": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P84_had_at_most_duration>"
+        ]
+    },
+    "was maximum duration of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P84i_was_maximum_duration_of>"
+        ]
+    },
+    "falls within": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P86_falls_within>"
+        ]
+    },
+    "contains": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P86i_contains>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P87_is_identified_by>"
+        ]
+    },
+    "identifies": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P87i_identifies>"
+        ]
+    },
+    "falls within": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P89_falls_within>"
+        ]
+    },
+    "contains": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P89i_contains>"
+        ]
+    },
+    "took place on or within": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P8_took_place_on_or_within>"
+        ]
+    },
+    "witnessed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P8i_witnessed>"
+        ]
+    },
+    "has value": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P90_has_value>"
+        ]
+    },
+    "has unit": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P91_has_unit>"
+        ]
+    },
+    "is unit of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P91i_is_unit_of>"
+        ]
+    },
+    "brought into existence": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P92_brought_into_existence>"
+        ]
+    },
+    "was brought into existence by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P92i_was_brought_into_existence_by>"
+        ]
+    },
+    "took out of existence": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P93_took_out_of_existence>"
+        ]
+    },
+    "was taken out of existence by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by>"
+        ]
+    },
+    "has created": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P94_has_created>"
+        ]
+    },
+    "was created by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P94i_was_created_by>"
+        ]
+    },
+    "has formed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P95_has_formed>"
+        ]
+    },
+    "was formed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P95i_was_formed_by>"
+        ]
+    },
+    "by mother": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P96_by_mother>"
+        ]
+    },
+    "gave birth": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P96i_gave_birth>"
+        ]
+    },
+    "from father": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P97_from_father>"
+        ]
+    },
+    "was father for": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P97i_was_father_for>"
+        ]
+    },
+    "brought into life": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P98_brought_into_life>"
+        ]
+    },
+    "was born": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P98i_was_born>"
+        ]
+    },
+    "dissolved": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P99_dissolved>"
+        ]
+    },
+    "was dissolved by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P99i_was_dissolved_by>"
+        ]
+    },
+    "consists of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P9_consists_of>"
+        ]
+    },
+    "forms part of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P9i_forms_part_of>"
+        ]
+    },
+    "subject to": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP104_subject_to>"
+        ]
+    },
+    "applies to": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP104i_applies_to>"
+        ]
+    },
+    "right held by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP105_right_held_by>"
+        ]
+    },
+    "right on": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP105i_right_on>"
+        ]
+    },
+    "should have type": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP2_should_have_type>"
+        ]
+    },
+    "should be type of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP2i_should_be_type_of>"
+        ]
+    },
+    "should have dimension": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP43_should_have_dimension>"
+        ]
+    },
+    "should be dimension of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP43i_should_be_dimension_of>"
+        ]
+    },
+    "should consist of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP45_should_consist_of>"
+        ]
+    },
+    "should be incorporated in": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP45i_should_be_incorporated_in>"
+        ]
+    },
+    "should be composed of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP46_should_be_composed_of>"
+        ]
+    },
+    "may form part of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP46i_may_form_part_of>"
+        ]
+    },
+    "should have number of parts": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLP57_should_have_number_of_parts>"
+        ]
+    },
+    "should carry": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLR6_should_carry>"
+        ]
+    },
+    "should be carried by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/CLR6i_should_be_carried_by>"
+        ]
+    },
+    "corporate body": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F11_Corporate_Body>"
+        ]
+    },
+    "name": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F12_Name>"
+        ]
+    },
+    "identifier": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F13_Identifier>"
+        ]
+    },
+    "individual work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F14_Individual_Work>"
+        ]
+    },
+    "complex work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F15_Complex_Work>"
+        ]
+    },
+    "container work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F16_Container_Work>"
+        ]
+    },
+    "aggregation work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F17_Aggregation_Work>"
+        ]
+    },
+    "serial work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F18_Serial_Work>"
+        ]
+    },
+    "publication work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F19_Publication_Work>"
+        ]
+    },
+    "work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F1_Work>"
+        ]
+    },
+    "performance work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F20_Performance_Work>"
+        ]
+    },
+    "recording work": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F21_Recording_Work>"
+        ]
+    },
+    "self-contained expression": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F22_Self-Contained_Expression>"
+        ]
+    },
+    "expression fragment": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F23_Expression_Fragment>"
+        ]
+    },
+    "publication expression": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F24_Publication_Expression>"
+        ]
+    },
+    "performance plan": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F25_Performance_Plan>"
+        ]
+    },
+    "recording": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F26_Recording>"
+        ]
+    },
+    "work conception": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F27_Work_Conception>"
+        ]
+    },
+    "expression creation": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F28_Expression_Creation>"
+        ]
+    },
+    "recording event": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F29_Recording_Event>"
+        ]
+    },
+    "expression": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F2_Expression>"
+        ]
+    },
+    "publication event": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F30_Publication_Event>"
+        ]
+    },
+    "performance": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F31_Performance>"
+        ]
+    },
+    "carrier production event": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F32_Carrier_Production_Event>"
+        ]
+    },
+    "reproduction event": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F33_Reproduction_Event>"
+        ]
+    },
+    "manifestation product type": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type>"
+        ]
+    },
+    "identifier assignment": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F40_Identifier_Assignment>"
+        ]
+    },
+    "representative manifestation assignment": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F41_Representative_Manifestation_Assignment>"
+        ]
+    },
+    "representative expression assignment": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F42_Representative_Expression_Assignment>"
+        ]
+    },
+    "identifier rule": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F43_Identifier_Rule>"
+        ]
+    },
+    "bibliographic agency": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F44_Bibliographic_Agency>"
+        ]
+    },
+    "manifestation singleton": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F4_Manifestation_Singleton>"
+        ]
+    },
+    "item": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F5_Item>"
+        ]
+    },
+    "concept": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F6_Concept>"
+        ]
+    },
+    "object": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F7_Object>"
+        ]
+    },
+    "event": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/F8_Event>"
+        ]
+    },
+    "has member": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R10_has_member>"
+        ]
+    },
+    "is member of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R10i_is_member_of>"
+        ]
+    },
+    "has issuing rule": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R11_has_issuing_rule>"
+        ]
+    },
+    "is issuing rule of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R11i_is_issuing_rule_of>"
+        ]
+    },
+    "is realised in": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R12_is_realised_in>",
+            "<http://erlangen-crm.org/efrbroo/R3_is_realised_in>",
+            "<http://erlangen-crm.org/efrbroo/R9_is_realised_in>",
+            "<http://erlangen-crm.org/efrbroo/R13_is_realised_in>"
+        ]
+    },
+    "realises": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R9i_realises>",
+            "<http://erlangen-crm.org/efrbroo/R12i_realises>",
+            "<http://erlangen-crm.org/efrbroo/R3i_realises>",
+            "<http://erlangen-crm.org/efrbroo/R13i_realises>"
+        ]
+    },
+    "incorporates": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R14_incorporates>"
+        ]
+    },
+    "is incorporated in": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R14i_is_incorporated_in>"
+        ]
+    },
+    "has fragment": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R15_has_fragment>"
+        ]
+    },
+    "is fragment of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R15i_is_fragment_of>"
+        ]
+    },
+    "initiated": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R16_initiated>"
+        ]
+    },
+    "was initiated by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R16i_was_initiated_by>"
+        ]
+    },
+    "created": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R24_created>",
+            "<http://erlangen-crm.org/efrbroo/R21_created>",
+            "<http://erlangen-crm.org/efrbroo/R18_created>",
+            "<http://erlangen-crm.org/efrbroo/R17_created>"
+        ]
+    },
+    "was created by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R18i_was_created_by>",
+            "<http://erlangen-crm.org/efrbroo/R17i_was_created_by>"
+        ]
+    },
+    "created a realisation of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R22_created_a_realisation_of>",
+            "<http://erlangen-crm.org/efrbroo/R19_created_a_realisation_of>",
+            "<http://erlangen-crm.org/efrbroo/R23_created_a_realisation_of>"
+        ]
+    },
+    "was realised through": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R22i_was_realised_through>",
+            "<http://erlangen-crm.org/efrbroo/R19i_was_realised_through>",
+            "<http://erlangen-crm.org/efrbroo/R23i_was_realised_through>"
+        ]
+    },
+    "is logical successor of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R1_is_logical_successor_of>"
+        ]
+    },
+    "has successor": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R1i_has_successor>"
+        ]
+    },
+    "recorded": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R20_recorded>"
+        ]
+    },
+    "was recorded through": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R20i_was_recorded_through>"
+        ]
+    },
+    "was created through": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R24i_was_created_through>",
+            "<http://erlangen-crm.org/efrbroo/R21i_was_created_through>"
+        ]
+    },
+    "performed": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R25_performed>",
+            "<http://erlangen-crm.org/efrbroo/R43i_performed>",
+            "<http://erlangen-crm.org/efrbroo/R44i_performed>"
+        ]
+    },
+    "was performed in": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R25i_was_performed_in>"
+        ]
+    },
+    "produced things of type": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R26_produced_things_of_type>"
+        ]
+    },
+    "was produced by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R26i_was_produced_by>",
+            "<http://erlangen-crm.org/efrbroo/R28i_was_produced_by>",
+            "<http://erlangen-crm.org/efrbroo/R30i_was_produced_by>"
+        ]
+    },
+    "used as source material": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R27_used_as_source_material>"
+        ]
+    },
+    "was used by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R27i_was_used_by>"
+        ]
+    },
+    "produced": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R28_produced>",
+            "<http://erlangen-crm.org/efrbroo/R30_produced>"
+        ]
+    },
+    "reproduced": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R29_reproduced>"
+        ]
+    },
+    "was reproduced by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R29i_was_reproduced_by>"
+        ]
+    },
+    "is derivative of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R2_is_derivative_of>"
+        ]
+    },
+    "has derivative": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R2i_has_derivative>"
+        ]
+    },
+    "is reproduction of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R31_is_reproduction_of>"
+        ]
+    },
+    "has reproduction": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R31i_has_reproduction>"
+        ]
+    },
+    "has representative expression": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R40_has_representative_expression>"
+        ]
+    },
+    "is representative expression for": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R40i_is_representative_expression_for>"
+        ]
+    },
+    "has representative manifestation product type": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R41_has_representative_manifestation_product_type>"
+        ]
+    },
+    "is representative manifestation product type for": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R41i_is_representative_manifestation_product_type_for>"
+        ]
+    },
+    "is representative manifestation singleton for": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R42_is_representative_manifestation_singleton_for>"
+        ]
+    },
+    "has representative manifestation singleton": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R42i_has_representative_manifestation_singleton>"
+        ]
+    },
+    "carried out by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R44_carried_out_by>",
+            "<http://erlangen-crm.org/efrbroo/R43_carried_out_by>"
+        ]
+    },
+    "assigned to": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R50_assigned_to>",
+            "<http://erlangen-crm.org/efrbroo/R45_assigned_to>",
+            "<http://erlangen-crm.org/efrbroo/R48_assigned_to>"
+        ]
+    },
+    "was assigned by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R50i_was_assigned_by>",
+            "<http://erlangen-crm.org/efrbroo/R51i_was_assigned_by>",
+            "<http://erlangen-crm.org/efrbroo/R48i_was_assigned_by>",
+            "<http://erlangen-crm.org/efrbroo/R53i_was_assigned_by>",
+            "<http://erlangen-crm.org/efrbroo/R45i_was_assigned_by>",
+            "<http://erlangen-crm.org/efrbroo/R49i_was_assigned_by>",
+            "<http://erlangen-crm.org/efrbroo/R46i_was_assigned_by>"
+        ]
+    },
+    "assigned": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R46_assigned>",
+            "<http://erlangen-crm.org/efrbroo/R53_assigned>",
+            "<http://erlangen-crm.org/efrbroo/R49_assigned>",
+            "<http://erlangen-crm.org/efrbroo/R51_assigned>"
+        ]
+    },
+    "used constituent": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R47_used_constituent>"
+        ]
+    },
+    "was used in": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R47i_was_used_in>"
+        ]
+    },
+    "carriers provided by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R4_carriers_provided_by>"
+        ]
+    },
+    "comprises carriers of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R4i_comprises_carriers_of>"
+        ]
+    },
+    "used rule": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R52_used_rule>"
+        ]
+    },
+    "was the rule used in": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R52i_was_the_rule_used_in>"
+        ]
+    },
+    "has component": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R5_has_component>"
+        ]
+    },
+    "is component of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R5i_is_component_of>"
+        ]
+    },
+    "carries": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R6_carries>"
+        ]
+    },
+    "is carried by": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R6i_is_carried_by>"
+        ]
+    },
+    "is example of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R7_is_example_of>"
+        ]
+    },
+    "has example": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R7i_has_example>"
+        ]
+    },
+    "consists of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R8_consists_of>"
+        ]
+    },
+    "forms part of": {
+        "urls": [
+            "<http://erlangen-crm.org/efrbroo/R8i_forms_part_of>"
+        ]
+    },
+    "marc list for languages": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/languages>"
+        ]
+    },
+    "marc list for countries": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/countries>"
+        ]
+    },
+    "marc list for geographic areas": {
+        "urls": [
+            "<http://id.loc.gov/vocabulary/geographicAreas>"
+        ]
+    }
+},"property" : {
+    "has note": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P3_has_note>"
+        ]
+    },
+    "died in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P100i_died_in>"
+        ]
+    },
+    "is subject to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P104_is_subject_to>"
+        ]
+    },
+    "is current or former member of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P107i_is_current_or_former_member_of>"
+        ]
+    },
+    "had participant": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P11_had_participant>"
+        ]
+    },
+    "is subject of": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P129i_is_subject_of>"
+        ]
+    },
+    "was present at": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P12i_was_present_at>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P131_is_identified_by>"
+        ]
+    },
+    "has representation": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P138i_has_representation>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P149_is_identified_by>"
+        ]
+    },
+    "performed": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P14i_performed>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P1_is_identified_by>"
+        ]
+    },
+    "has type": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P2_has_type>"
+        ]
+    },
+    "has dimension": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P43_has_dimension>"
+        ]
+    },
+    "has preferred identifier": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P48_has_preferred_identifier>"
+        ]
+    },
+    "has time-span": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P4_has_time-span>"
+        ]
+    },
+    "has current keeper": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P50_has_current_keeper>"
+        ]
+    },
+    "has former or current location": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P53_has_former_or_current_location>"
+        ]
+    },
+    "refers to": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P67_refers_to>"
+        ]
+    },
+    "is documented in": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P70i_is_documented_in>"
+        ]
+    },
+    "is possessed by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P75i_is_possessed_by>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P78_is_identified_by>"
+        ]
+    },
+    "took place at": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P7_took_place_at>"
+        ]
+    },
+    "is identified by": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P87_is_identified_by>"
+        ]
+    },
+    "contains": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P89i_contains>"
+        ]
+    },
+    "has value": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P90_has_value>"
+        ]
+    },
+    "has unit": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P91_has_unit>"
+        ]
+    },
+    "was born": {
+        "urls": [
+            "<http://erlangen-crm.org/current/P98i_was_born>"
+        ]
+    },
+	"instanceOf":{
+		"urls": [
+			"<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
+		]
+	},
+	"label":{
+		"urls": [
+			"<http://www.w3.org/2000/01/rdf-schema#label>"
+		]
+	}
+}
+
+}
